@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Jogo da Memória | Halloween</title>
 </head>
@@ -18,108 +19,21 @@
             </div>
 
             <div>
-                <select>
-                    <option value="">Nível fácil</option>
-                    <option value="">Nível difícil</option>
+                <select class="level">
+                    <option value="easy">Nível fácil</option>
+                    <option value="difficult">Nível difícil</option>
                 </select>
             </div>
+            
+            <h2>Tentativas: <span class="player-lives-count"></span></h2>
         </div>
 
-        <div class="main-bottom-content">
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/01.png" alt="Image 01">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/01.png" alt="Image 01">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/02.png" alt="Image 02">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/02.png" alt="Image 02">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/03.png" alt="Image 03">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/03.png" alt="Image 03">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/04.png" alt="Image 04">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/04.png" alt="Image 04">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/05.png" alt="Image 05">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/05.png" alt="Image 05">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/06.png" alt="Image 06">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/06.png" alt="Image 06">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/07.png" alt="Image 07">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/07.png" alt="Image 07">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/08.png" alt="Image 08">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/08.png" alt="Image 08">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/09.png" alt="Image 09">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-front">
-                    <img src="assets/images/09.png" alt="Image 09">
-                </div>
-            </div>
-        </div>
+        <div class="main-bottom-content"></div>          
 
     </main>
 
+
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 
 </html>
