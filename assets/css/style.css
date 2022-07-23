@@ -20,7 +20,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('/assets/images/background.png');
+    background-image: url('../images/background.png');
     background-size: cover;
 }
 
@@ -55,7 +55,7 @@ h2 {
 select {
     width: 28rem;
     padding: 1.3rem 2rem;
-    background-image: url("/assets/images/arrow-select.svg");
+    background-image: url("../images/arrow-select.svg");
     background-position: right 1rem center;
     background-repeat: no-repeat;
     background-color: var(--wine);
