@@ -1,9 +1,10 @@
 import { getData } from "./data.js";
+import { winnerModal } from "./modal.js";
 
 const cardContainer = document.querySelector('.main-bottom-content');
 const playerLivesCount = document.querySelector('h2 span');
 let select = document.querySelector('select');
-let playerLives = 20;       // default (easy)
+let playerLives = 25;       // default (easy)
 
 playerLivesCount.textContent = playerLives;
 
@@ -15,7 +16,7 @@ const changeDifficult = () => {
         let optionValue = select.options[select.selectedIndex];   
         let value = optionValue.value;
     
-        value === 'easy' ? playerLives = 20 : playerLives = 10;
+        value === 'easy' ? playerLives = 25 : playerLives = 15;
     
         playerLivesCount.textContent = playerLives;
     });
@@ -93,7 +94,7 @@ const checkCards = (e) => {
             playerLivesCount.textContent = playerLives;
 
             if (playerLives === 0) {
-                restart('😢 Você perdeu! Tente novamente');
+                restart('😢 Você perdeu! Tente novamente.');
                 setTimeout(() =>  document.location.reload(true), 1500);
             }
         }
@@ -101,9 +102,7 @@ const checkCards = (e) => {
 
     // Verifica se o jogador venceu o jogo
     if (toggleCard.length === 18) {
-        restart('Você venceu!!!');
-
-        // CRIAR O MODAL
+        winnerModal('modal-winner');
     }
 }
 

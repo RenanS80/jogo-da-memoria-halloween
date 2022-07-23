@@ -119,6 +119,92 @@ select {
 }
 
 
+/* Modal de vencedor */
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -6rem, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;        /* Fica posicionado sobre o site inteiro */
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.show {
+    display: flex;    /* Exibe o modal */
+}
+
+.show .modal {
+    animation: modal .3s;    /* Associa o elemento à animação do keyframes */
+}
+
+.modal {
+    background: var(--black);
+    border-radius: 1.6rem;
+    width: 40%;
+    min-width: 35rem;      /* Largura mínima de 350px quando diminuir a tela */
+    padding: 4rem;
+    position: relative;        /* Usado para que o botão de fechar fique absoluto a ele */
+}
+
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-wrapper p {
+    color: white;
+    max-width: 80%;
+    text-align: center;
+    line-height: 2.6rem;
+}
+
+.btn-play-again {
+    padding: 1rem 7rem;
+    margin-top: 5.5rem;
+    background: var(--wine);
+    border: 0.1rem solid var(--yellow);
+    box-shadow: 0 0 0.8rem var(--orange);
+    border-radius: 0.8rem; 
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.btn-play-again:hover {
+    opacity: 0.85;
+}
+
+.close {
+    position: absolute;
+    top: -4.5rem;
+    right: -4.5rem;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+
 /* Media queries */
 @media (max-width: 382px) {
     .main-bottom-content {
